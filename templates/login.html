@@ -1,0 +1,24 @@
+<html>
+  <body>
+    {% include "header.html" %}
+    <h1>Login</h1>
+
+    <form action="/auth" method="POST">
+       <div>
+         Username or email address
+       </div>
+       <input type="text" name="username"></input>
+       <div>
+         Password
+       </div>
+       <input type="password" name="password"></input>
+       <div>
+       <input type="submit" value="Login"/>
+       </div>
+       </form>
+       {% if error %}
+       <p class="error"><soft>Error:</soft> {{ error }}
+       {% endif %}
+    {% include "footer.html" %}
+  </body>
+</html>
